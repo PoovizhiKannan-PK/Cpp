@@ -40,7 +40,5 @@ int main(){
 
     cout << "\nBiggest Palindrome: " << palindrome;
 
-    
-    
     return 0;
 }
