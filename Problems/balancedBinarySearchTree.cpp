@@ -29,7 +29,6 @@ Node* createBinarySearchTree(Node* root, int data){
 
 void treeTraversal(Node* root, vector<int> &v){
     if(root == NULL) return;
-
     treeTraversal(root->left, v);
     v.push_back(root->data);
     treeTraversal(root->right, v);
@@ -52,13 +51,14 @@ void BFS(Node* root){
 
     while(!q.empty()){
         Node* temp = q.front();
-        cout << temp->data;
+        cout << temp->data << " ";
         if(temp->left != NULL){
             q.push(temp->left);
         }
         if(temp->right != NULL){
             q.push(temp->right);
         }
+        q.pop();
     }
 
 }
@@ -68,7 +68,7 @@ int main(){
 
     Node* root = NULL;
     vector <int> v;
-    int a[] = {1,2,3,4,9,6,7};
+    int a[] = {1,2,3,4,5,6,7};
     int n = sizeof(a)/sizeof(a[0]);
     
     for(int i = 0; i < n ; i++){
@@ -77,9 +77,10 @@ int main(){
 
     //cout << "Tree: ";
     treeTraversal(root, v);
-    BFS(root);
+    //BFS(root);
+
     root = balancedTree(v, 0, v.size()-1);
-    
+    cout << endl;
     BFS(root);
 
     return 0;
