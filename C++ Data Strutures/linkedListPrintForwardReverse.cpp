@@ -37,7 +37,7 @@ void displayReverse(Node* head){
 
 int main(){
     Node* head = NULL;
-    head = insert(head,2,1); //2s
+    head = insert(head,2,1); //2
     head = insert(head,3,2); //2 3
     head = insert(head,5,2); // 2 5 3
     head = insert(head,6,2); //6 2 5 3
