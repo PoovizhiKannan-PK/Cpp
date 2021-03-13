@@ -6,25 +6,32 @@ using namespace std;
 
 int main(){
     vector<double> v;
+    vector<char> ch = {'a', 'b', 'c', 'd'};
     list<double> l;
     list<double>::iterator i;
 
-    for(int i =0; i<10; i++){
-        cout<< v.size() << " +1: ";
-        v.push_back(i+1);
-        l.push_back(i+1);
-        cout<< v[i] <<endl;
+    std:string str = "";
+    int j =0;
+    cout<< "Vector: ";
+    for(vector<char>::iterator i = ch.begin(); i != ch.end(); i++){
+        cout << *i << " ";
+        str.append(1, *i);
+        j++;
+        //cout << *i << " " << str;
     }
 
-    cout<< "Vector: ";
-    for(vector<double>::iterator i = v.begin(); i != v.end(); i++){
-        cout << *i << " ";
-    }
+    cout << "\nstr: " << str; 
 
     cout << "\nList: ";
     for( i = l.begin(); i != l.end(); i++){
         cout << *i << " ";
     }
+
+    cout << "\nList without Iterator: ";
+    for(int j : l){
+        cout<< j << " ";
+    }
+
 
     cout << "\nGo to 4th Position: ";
     int n = 5;

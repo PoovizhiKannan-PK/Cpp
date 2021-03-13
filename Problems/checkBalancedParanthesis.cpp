@@ -5,9 +5,10 @@ using namespace std;
 
 int main(){
     stack <char> s;
+    s.push(0);
     string str;
     bool flag = true;
-    cout << "Input string";
+    cout << "Input string: ";
     cin >> str;
     for(int i = 0; i < str.length(); i++){
         if (str[i] == '{' || str[i] == '(' || str[i] == '['){
